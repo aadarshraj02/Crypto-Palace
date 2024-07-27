@@ -1,6 +1,9 @@
-
 const Navbar = () => {
-  return <div></div>;
+  return (
+    <div>
+      <img src="/logo.png" alt="logo" />
+    </div>
+  );
 };
 
 export default Navbar;
