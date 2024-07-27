@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <div>
-      <div className="hro">
+    <div className="pb-20 py-4">
+      <div className="hero max-w-[600px] mx-auto my-20 flex flex-col text-center gap-8">
         <h1>
           Largest <br /> Crypto Marketplace
         </h1>
