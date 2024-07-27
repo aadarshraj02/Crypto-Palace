@@ -8,6 +8,13 @@ const Navbar = () => {
         <li>Pricing</li>
         <li>Blog</li>
       </ul>
+      <div>
+        <select>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="inr">INR</option>
+        </select>
+      </div>
     </div>
   );
 };
