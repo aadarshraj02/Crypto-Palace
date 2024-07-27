@@ -25,7 +25,7 @@ const Home = () => {
           </button>
         </form>
       </div>
-      <div className="crypto-table">
+      <div className="crypto-table max-w-[800px] m-auto rounded-md bg-[linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15))]">
         <div className="table-layout">
           {headings.map((heading, index) => (
             <p key={index}>{heading}</p>
