@@ -8,8 +8,8 @@ function App() {
     <div className="min-h-screen text-white bg-custom-gradient">
       <Navbar />
       <Routes>
-        <Route path="/" element={Home}></Route>
-        <Route path="/coin/:coinId" element={Coin}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/coin/:coinId" element={<Coin />}></Route>
       </Routes>
     </div>
   );
