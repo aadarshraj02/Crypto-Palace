@@ -1,4 +1,6 @@
 const Home = () => {
+  const headings = ["#", "Coins", "Price", "24H Change", "Market Cap"];
+
   return (
     <div className="pb-20 py-4">
       <div className="hero max-w-[600px] mx-auto my-20 flex flex-col text-center gap-8">
@@ -25,11 +27,9 @@ const Home = () => {
       </div>
       <div className="crypto-table">
         <div className="table-layout">
-          <p>#</p>
-          <p>Coins</p>
-          <p>Price</p>
-          <p>24H Change</p>
-          <p>Market Cap</p>
+          {headings.map((heading, index) => (
+            <p key={index}>{heading}</p>
+          ))}
         </div>
       </div>
     </div>
