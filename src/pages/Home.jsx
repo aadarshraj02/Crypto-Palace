@@ -2,10 +2,10 @@ const Home = () => {
   return (
     <div className="pb-20 py-4">
       <div className="hero max-w-[600px] mx-auto my-20 flex flex-col text-center gap-8">
-        <h1>
+        <h1 className="text-[4vw] leading-none">
           Largest <br /> Crypto Marketplace
         </h1>
-        <p>
+        <p className=" text-[#e3e3e3] leading-none text-center">
           Welcome to the world largest cryptocurrency marketplace. Sign up to
           explore more about cryptos.
         </p>
