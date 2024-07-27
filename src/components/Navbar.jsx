@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <div className="flex items-center justify-between py-4 px-10">
+    <div className="flex items-center justify-between py-4 px-10 border-['#3c3c3c'] border-b-2">
       <img src="/logo.png" alt="logo" />
       <ul className="flex gap-10 ">
         <li>Home</li>
@@ -9,10 +9,10 @@ const Navbar = () => {
         <li>Blog</li>
       </ul>
       <div className="flex items-center gap-5">
-        <select className="text-black">
-          <option value="usd">USD</option>
-          <option value="eur">EUR</option>
-          <option value="inr">INR</option>
+        <select className="px-1 py-2 rounded-md bg-transparent">
+          <option className="text-black " value="usd">USD</option>
+          <option className="text-black " value="eur">EUR</option>
+          <option className="text-black " value="inr">INR</option>
         </select>
         <button className="bg-green-700 px-3 rounded-md cursor-pointer">
           Sign up
