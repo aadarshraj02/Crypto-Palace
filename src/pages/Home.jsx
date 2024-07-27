@@ -9,9 +9,18 @@ const Home = () => {
           Welcome to the world largest cryptocurrency marketplace. Sign up to
           explore more about cryptos.
         </p>
-        <form>
-          <input type="text" placeholder="search crypto.." />
-          <button type="submit">Search</button>
+        <form className="p-2 bg-white rounded-md text-xl flex justify-between items-center gap-3">
+          <input
+            className="flex-1 text-lg outline-none border-none pl-2 text-black"
+            type="text"
+            placeholder="search crypto.."
+          />
+          <button
+            className="bg-[#7927ff] text-white text-lg px-8 py-2 rounded-md"
+            type="submit"
+          >
+            Search
+          </button>
         </form>
       </div>
     </div>
