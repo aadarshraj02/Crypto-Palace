@@ -26,9 +26,16 @@ const Home = () => {
         </form>
       </div>
       <div className="crypto-table max-w-[800px] m-auto rounded-md bg-[linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15))]">
-        <div className="table-layout">
+        <div className="table-layout grid grid-cols-[0.5fr_2fr_1fr_1fr_1.5fr] px-5 py-4 items-center border-b-2 border-[#3c3c3c]">
           {headings.map((heading, index) => (
-            <p key={index}>{heading}</p>
+            <p
+              className={
+                index === 3 ? "text-center" : index === 4 ? "text-right" : ""
+              }
+              key={index}
+            >
+              {heading}
+            </p>
           ))}
         </div>
       </div>
