@@ -13,8 +13,8 @@ const Home = () => {
 
   return (
     <div className="pb-20 py-4">
-      <div className="hero max-w-[600px] mx-auto my-20 flex flex-col text-center gap-8">
-        <h1 className="text-[4vw] leading-none">
+      <div className="hero max-w-[800px] mx-auto my-20 flex flex-col text-center gap-8 ">
+        <h1 className="text-[4vw] leading-none font-semibold">
           Largest <br /> Crypto Marketplace
         </h1>
         <p className=" text-[#e3e3e3] leading-none text-center">
@@ -35,7 +35,7 @@ const Home = () => {
           </button>
         </form>
       </div>
-      <div className="crypto-table max-w-[800px] m-auto rounded-md bg-[linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15))]">
+      <div className="crypto-table max-w-[1000px] m-auto rounded-md bg-[linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15))] py-2">
         <div className="table-layout grid grid-cols-[0.5fr_2fr_1fr_1fr_1.5fr] px-5 py-4 items-center border-b-2 border-[#3c3c3c]">
           {headings.map((heading, index) => (
             <p
