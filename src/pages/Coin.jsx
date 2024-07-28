@@ -56,6 +56,9 @@ const Coin = () => {
             </b>
           </p>
         </div>
+        <div className="coinChart">
+          <lineChart historicalData={historicalData} />
+        </div>
       </div>
     );
   } else {
