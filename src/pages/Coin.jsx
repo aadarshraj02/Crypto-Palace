@@ -5,6 +5,7 @@ import { CoinContext } from "../context/CoinContext";
 const Coin = () => {
   const { coinId } = useParams();
   const [coinData, setCoinData] = useState();
+  const [historicalData, setHistoricalData] = useState();
   const { currency } = useContext(CoinContext);
 
   const fetchCoinData = async () => {
@@ -19,6 +20,24 @@ const Coin = () => {
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
       .then((response) => response.json())
       .then((response) => setCoinData(response))
+      .catch((err) => console.error(err));
+  };
+
+  const fetchHistoricalData = async () => {
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "x-cg-demo-api-key": "CG-a9PQo7NdvpLUsJm67GwVAnmg",
+      },
+    };
+
+    fetch(
+      "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=10",
+      options
+    )
+      .then((response) => response.json())
+      .then((response) => setHistoricalData(response))
       .catch((err) => console.error(err));
   };
 
