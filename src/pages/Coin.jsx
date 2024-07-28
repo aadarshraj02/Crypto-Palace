@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { CoinContext } from "../context/CoinContext";
 
 const Coin = () => {
   const { coinId } = useParams();
   const [coinData, setCoinData] = useState();
+  const { currency } = useContext(CoinContext);
 
   const fetchCoinData = async () => {
     const options = {
@@ -22,9 +24,28 @@ const Coin = () => {
 
   useEffect(() => {
     fetchCoinData();
-  }, []);
+  }, [currency]);
 
-  return <div></div>;
+  if (coinData) {
+    return (
+      <div className="coin">
+        <div className="coinName">
+          <img src={coinData.image.large} alt="" />
+          <p>
+            <b>
+              {coinData.name} ({coinData.symbol.toUpperCase()})
+            </b>
+          </p>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="spinner">
+        <div className="spin"></div>
+      </div>
+    );
+  }
 };
 
 export default Coin;
