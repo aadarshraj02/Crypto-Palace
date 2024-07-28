@@ -10,6 +10,9 @@ const Home = () => {
 
   const inputHandler = (e) => {
     setInput(e.target.value);
+    if (e.target.value === "") {
+      setDisplayCoin(allCoin);
+    }
   };
   const searchHandler = async (e) => {
     e.preventDefault();
