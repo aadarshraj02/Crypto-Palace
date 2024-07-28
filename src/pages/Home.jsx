@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CoinContext } from "../context/CoinContext";
 
 const Home = () => {
@@ -6,6 +6,10 @@ const Home = () => {
 
   const { allCoin, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
+
+  useEffect(() => {
+    setDisplayCoin(allCoin);
+  }, [allCoin]);
 
   return (
     <div className="pb-20 py-4">
