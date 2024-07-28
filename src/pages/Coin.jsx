@@ -41,8 +41,8 @@ const Coin = () => {
     );
   } else {
     return (
-      <div className="spinner">
-        <div className="spin"></div>
+      <div className="spinner flex items-center justify-center min-h-[80vh]">
+        <div className="spin w-16 h-16 flex items-center justify-center border-2 border-[#4500c6] rounded-full"></div>
       </div>
     );
   }
