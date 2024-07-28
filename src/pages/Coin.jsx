@@ -49,8 +49,8 @@ const Coin = () => {
 
   if (coinData && historicalData) {
     return (
-      <div className="coin">
-        <div className="coinName">
+      <div className="coin py-5">
+        <div className="coinName flex flex-col items-center gap-5 my-20 mx-auto mb-10 ">
           <img src={coinData.image.large} alt="" />
           <p>
             <b>
