@@ -2,8 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      <p>Copyright @ 2023, Crypto Palace - ALl Right Reserved</p>
+    <div className="border-t-2">
+      <p className="text-center text-md py-3">
+        Copyright @ 2023, Crypto Palace - All Right Reserved
+      </p>
     </div>
   );
 };
