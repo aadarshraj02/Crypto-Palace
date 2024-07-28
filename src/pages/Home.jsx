@@ -6,6 +6,18 @@ const Home = () => {
 
   const { allCoin, currency } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
+  const [input, setInput] = useState("");
+
+  const inputHandler = (e) => {
+    setInput(e.target.value);
+  };
+  const searchHandler = async (e) => {
+    e.preventDefault();
+    const coins = await allCoin.filter((item) => {
+      return item.name.toLowerCase().includes(input.toLowerCase());
+    });
+    setDisplayCoin(coins);
+  };
 
   useEffect(() => {
     setDisplayCoin(allCoin);
@@ -21,11 +33,17 @@ const Home = () => {
           Welcome to the world largest cryptocurrency marketplace. Sign up to
           explore more about cryptos.
         </p>
-        <form className="p-2 bg-white rounded-md text-xl flex flex-col sm:flex-row justify-between items-center gap-3 max-w-[80%] mx-auto">
+        <form
+          onSubmit={searchHandler}
+          className="p-2 bg-white rounded-md text-xl flex flex-col sm:flex-row justify-between items-center gap-3 max-w-[80%] mx-auto"
+        >
           <input
+            onChange={inputHandler}
+            value={input}
             className="flex-1 text-lg outline-none border-none pl-2 text-black"
             type="text"
             placeholder="search crypto.."
+            required
           />
           <button
             className="bg-[#7927ff] text-white text-lg px-8 py-2 rounded-md w-full"
