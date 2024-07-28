@@ -67,6 +67,15 @@ const Coin = () => {
             <li>Crypto Market Rank</li>
             <li>{coinData.market_cap_rank}</li>
           </ul>
+          <ul>
+            <li>Current Price</li>
+            <li>
+              {currency.symbol}
+              {coinData.market_data.current_price[
+                currency.name
+              ].tolocaleString()}
+            </li>
+          </ul>
         </div>
       </div>
     );
