@@ -61,6 +61,13 @@ const Coin = () => {
         <div className="coinChart">
           <LineChart historicalData={historicalData} />
         </div>
+
+        <div className="coinInfo">
+          <ul>
+            <li>Crypto Market Rank</li>
+            <li>{coinData.market_cap_rank}</li>
+          </ul>
+        </div>
       </div>
     );
   } else {
