@@ -48,6 +48,14 @@ const Home = () => {
             </p>
           ))}
         </div>
+        {displayCoin.slice(0, 10).map((item, index) => (
+          <div
+            className="table-layout grid grid-cols-[0.5fr_2fr_1fr_1fr_1.5fr] px-5 py-4 items-center border-b-2 border-[#3c3c3c]"
+            key={index}
+          >
+            <p>{item.market_cap_rank}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
