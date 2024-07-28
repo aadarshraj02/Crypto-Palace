@@ -49,46 +49,46 @@ const Coin = () => {
 
   if (coinData && historicalData) {
     return (
-      <div className="coin py-5">
+      <div className="coin py-5 ">
         <div className="coinName flex flex-col items-center gap-5 my-20 mx-auto mb-10 ">
-          <img src={coinData.image.large} alt="" />
+          <img className="max-w-24" src={coinData.image.large} alt="" />
           <p>
             <b>
               {coinData.name} ({coinData.symbol.toUpperCase()})
             </b>
           </p>
         </div>
-        <div className="coinChart">
+        <div className="coinChart max-w-[80%] mx-auto mb-10 ">
           <LineChart historicalData={historicalData} />
         </div>
 
-        <div className="coinInfo">
-          <ul>
+        <div className="coinInfo flex flex-col p-4 items-center max-w-[80%] mx-auto gap-1 ">
+          <ul className="flex gap-20">
             <li>Crypto Market Rank</li>
             <li>{coinData.market_cap_rank}</li>
           </ul>
-          <ul>
+          <ul className="flex gap-20">
             <li>Current Price</li>
             <li>
               {currency.symbol}
               {coinData.market_data.current_price[currency.name]}
             </li>
           </ul>
-          <ul>
+          <ul className="flex gap-20">
             <li>Market Cap</li>
             <li>
               {currency.symbol}
               {coinData.market_data.market_cap[currency.name]}
             </li>
           </ul>
-          <ul>
+          <ul className="flex gap-20">
             <li>24H High</li>
             <li>
               {currency.symbol}
               {coinData.market_data.high_24h[currency.name]}
             </li>
           </ul>
-          <ul>
+          <ul className="flex gap-20">
             <li>24H Low</li>
             <li>
               {currency.symbol}
