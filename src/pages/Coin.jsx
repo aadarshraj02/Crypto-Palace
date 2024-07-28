@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const Coin = () => {
@@ -16,9 +16,13 @@ const Coin = () => {
 
     fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
       .then((response) => response.json())
-      .then((response) => console.log(response))
+      .then((response) => setCoinData(response))
       .catch((err) => console.error(err));
   };
+
+  useEffect(() => {
+    fetchCoinData();
+  }, []);
 
   return <div></div>;
 };
