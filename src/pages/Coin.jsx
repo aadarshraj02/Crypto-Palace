@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CoinContext } from "../context/CoinContext";
+import LineChart from "../components/LineChart";
 
 const Coin = () => {
   const { coinId } = useParams();
@@ -58,7 +59,7 @@ const Coin = () => {
           </p>
         </div>
         <div className="coinChart">
-          <lineChart historicalData={historicalData} />
+          <LineChart historicalData={historicalData} />
         </div>
       </div>
     );
