@@ -1,5 +1,11 @@
+import { useContext, useState } from "react";
+import { CoinContext } from "../context/CoinContext";
+
 const Home = () => {
   const headings = ["#", "Coins", "Price", "24H Change", "Market Cap"];
+
+  const { allCoin, currency } = useContext(CoinContext);
+  const [displayCoin, setDisplayCoin] = useState([]);
 
   return (
     <div className="pb-20 py-4">
