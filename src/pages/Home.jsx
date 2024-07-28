@@ -39,9 +39,10 @@ const Home = () => {
         <div className="table-layout grid grid-cols-[0.5fr_2fr_1fr_1fr_1.5fr] px-5 py-4 items-center border-b-2 border-[#3c3c3c]">
           {headings.map((heading, index) => (
             <p
-              className={
-                index === 3 ? "text-center" : index === 4 ? "text-right" : ""
-              }
+              className={` font-bold text-lg text-zinc-300
+                ${
+                  index === 3 ? "text-center" : index === 4 ? "text-right" : ""
+                }`}
               key={index}
             >
               {heading}
@@ -54,20 +55,24 @@ const Home = () => {
             key={index}
           >
             <p>{item.market_cap_rank}</p>
-            <div>
-              <img src={item.image} alt="" />
+            <div className="flex items-center gap-3">
+              <img className="w-8" src={item.image} alt="" />
               <p>{item.name + "-" + item.symbol}</p>
             </div>
             <p>
               {currency.symbol} {item.current_price.toLocaleString()}
             </p>
-            <p className="text-center">
+            <p
+              className={`text-center rounded-full py-1 ${
+                item.price_change_percentage_24h > 0
+                  ? "bg-green-500"
+                  : "bg-red-600"
+              }`}
+            >
               {Math.floor(item.price_change_percentage_24h * 100) / 100} %
             </p>
             <p className="text-right">
-              {" "}
-              {currency.symbol}
-              {item.market_cap.toLocaleString()}
+              {currency.symbol} {item.market_cap.toLocaleString()}
             </p>
           </div>
         ))}
