@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div className="flex items-center justify-between py-4 px-10 border-['#3c3c3c'] border-b-2">
       <img src="/logo.png" alt="logo" />
-      <ul className="flex gap-10 ">
+      <ul className="hidden md:flex gap-10">
         <li>Home</li>
         <li>Features</li>
         <li>Pricing</li>
@@ -61,7 +61,7 @@ const Navbar = () => {
             INR
           </option>
         </select>
-        <button className="bg-green-700 px-3 rounded-md cursor-pointer">
+        <button className="bg-green-700 px-3 rounded-md cursor-pointer hidden sm:block">
           Sign up
         </button>
       </div>
