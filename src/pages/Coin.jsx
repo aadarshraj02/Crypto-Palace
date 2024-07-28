@@ -71,9 +71,14 @@ const Coin = () => {
             <li>Current Price</li>
             <li>
               {currency.symbol}
-              {coinData.market_data.current_price[
-                currency.name
-              ].tolocaleString()}
+              {coinData.market_data.current_price[currency.name]}
+            </li>
+          </ul>
+          <ul>
+            <li>Market Cap</li>
+            <li>
+              {currency.symbol}
+              {coinData.market_data.market_cap[currency.name]}
             </li>
           </ul>
         </div>
