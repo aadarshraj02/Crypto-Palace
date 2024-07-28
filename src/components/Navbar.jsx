@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CoinContext } from "../context/CoinContext";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
@@ -39,7 +40,9 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between py-4 px-10 border-['#3c3c3c'] border-b-2">
-      <img src="/logo.png" alt="logo" />
+      <Link to={"/"}>
+        <img src="/logo.png" alt="logo" />
+      </Link>
       <ul className="hidden md:flex gap-10">
         <li>Home</li>
         <li>Features</li>
