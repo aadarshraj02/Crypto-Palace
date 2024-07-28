@@ -81,6 +81,13 @@ const Coin = () => {
               {coinData.market_data.market_cap[currency.name]}
             </li>
           </ul>
+          <ul>
+            <li>24H High</li>
+            <li>
+              {currency.symbol}
+              {coinData.market_data.high_24h[currency.name]}
+            </li>
+          </ul>
         </div>
       </div>
     );
