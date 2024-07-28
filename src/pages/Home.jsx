@@ -54,6 +54,10 @@ const Home = () => {
             key={index}
           >
             <p>{item.market_cap_rank}</p>
+            <div>
+              <img src={item.image} alt="" />
+              <p>{item.name + "-" + item.symbol}</p>
+            </div>
           </div>
         ))}
       </div>
