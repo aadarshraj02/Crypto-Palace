@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
+import Chart from "react-google-charts";
 
 const LineChart = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const [data, setData] = useState([["Date,Prices"]]);
+  return <div></div>;
+};
 
-export default LineChart
+export default LineChart;
