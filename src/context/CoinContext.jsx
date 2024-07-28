@@ -19,7 +19,7 @@ const CoinContextProvider = (props) => {
     };
 
     fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd",
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
       options
     )
       .then((response) => response.json())
@@ -29,9 +29,11 @@ const CoinContextProvider = (props) => {
 
   useEffect(() => {
     fetchAllCoins();
-  }, []);
+  }, [currency]);
 
-  const contextValue = {};
+  const contextValue = {
+    allCoin,currency,setCurrency
+  };
 
   return (
     <CoinContext.Provider value={contextValue}>
