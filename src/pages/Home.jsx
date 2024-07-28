@@ -59,12 +59,16 @@ const Home = () => {
               <p>{item.name + "-" + item.symbol}</p>
             </div>
             <p>
-              {currency.symbol} {item.current_price}
+              {currency.symbol} {item.current_price.toLocaleString()}
             </p>
             <p className="text-center">
               {Math.floor(item.price_change_percentage_24h * 100) / 100} %
             </p>
-            <p className="text-right">{item.market_cap}</p>
+            <p className="text-right">
+              {" "}
+              {currency.symbol}
+              {item.market_cap.toLocaleString()}
+            </p>
           </div>
         ))}
       </div>
